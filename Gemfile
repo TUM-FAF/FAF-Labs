@@ -23,6 +23,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'capybara'
+  gem 'rspec-rails'
 end
 
 gem 'jquery-rails'

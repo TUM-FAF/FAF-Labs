@@ -173,6 +173,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-deprecated_finders!
   arel!
+  capybara
   coffee-rails!
   cucumber-rails
   database_cleaner

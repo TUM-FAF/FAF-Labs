@@ -20,7 +20,8 @@ group :assets do
 end
 
 group :test do
- gem 'cucumber-rails'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 gem 'jquery-rails'

@@ -5,7 +5,7 @@ describe CoursesController do
     it "responds successfully with an HTTP 200 status code" do
       get :index
       expect(response).to be_success
-      expect(response.code).to eq(200)
+      expect(response.code).to eq("200")
     end
 
     it "renders the index template" do

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',     github: 'rails/rails'
 gem 'arel',      github: 'rails/arel'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
+gem 'protected_attributes'
 
 gem 'sqlite3'
 
@@ -21,7 +22,7 @@ end
 
 group :test do
   gem 'cucumber-rails'
-  gem 'database_cleaner'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'capybara'
   gem 'rspec-rails'
 end

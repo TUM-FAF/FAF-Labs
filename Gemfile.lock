@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/bmabey/database_cleaner.git
+  revision: 83d69e68e3d2b89d5060057e5debac565542c0d6
+  specs:
+    database_cleaner (0.9.1)
+
+GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
   revision: 5937f3e7102f9be461ce2dccaef0e4d14e92cd35
   specs:
@@ -106,7 +112,6 @@ GEM
       capybara (>= 1.1.2)
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
-    database_cleaner (0.9.1)
     diff-lcs (1.2.1)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -131,6 +136,8 @@ GEM
     multi_json (1.6.1)
     nokogiri (1.5.6)
     polyglot (0.3.3)
+    protected_attributes (1.0.0)
+      activemodel (>= 4.0.0.beta, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -187,9 +194,10 @@ DEPENDENCIES
   capybara
   coffee-rails!
   cucumber-rails
-  database_cleaner
+  database_cleaner!
   jbuilder (~> 1.0.1)
   jquery-rails
+  protected_attributes
   rails!
   rspec-rails
   sass-rails!

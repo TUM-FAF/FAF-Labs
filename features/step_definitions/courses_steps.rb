@@ -1,11 +1,11 @@
-Given(/^I am on the main page$/) do
+Given(/^I want to open the main page$/) do
+  Course.create!(:name => "Windows Programming")
+end
+
+Given(/^I open main page$/) do
   visit '/'
 end
 
-Given(/^there are courses$/) do
-  course = Course.create!
-end
-
 Then(/^I should see the list of courses$/) do
-  assert page.has_content?("Windows Programming")
+  assert page.has_content?("Windows Programming"), page.html
 end

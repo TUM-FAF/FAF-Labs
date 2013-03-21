@@ -18,8 +18,18 @@ Then do the following:
     gem install bundler
     bundle install
 
-You'll need the 
 It will download and install all the necessary libraries. If some of them fail, open an issue and we'll update this guide with proper instructions.
+
+Launching
+---------
+
+When you just downloaded it, do the following:
+
+    rake db:migrate
+    rake db:seed
+    rails s
+
+And then go to `localhost:3000` and voila!
 
 Contributing
 ------------

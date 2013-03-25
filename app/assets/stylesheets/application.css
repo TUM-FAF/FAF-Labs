@@ -12,6 +12,7 @@
  *= require_tree .
  *= require foundation_and_overrides
  */
+
 header {
   height: 48px;
   line-height: 48px;
@@ -19,17 +20,17 @@ header {
   color: white;
   background: black;
 }
-
 #logo {
   font-family:'Inconsolata', sans-serif;
+  min-width: 100px;
+  min-height: 20px;
   position: relative;
   cursor: default;
-  width: 120px;
-  height: 2em;
   font-size: 18pt;
 }
-.letter {
-  position: absolute;
+#logo i {
+    font-style: normal;
+    position: absolute;
 }
 .main-bg {
   background: #b8d30b;

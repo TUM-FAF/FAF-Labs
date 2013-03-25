@@ -10,5 +10,37 @@
  *
  *= require_self
  *= require_tree .
- */
  *= require foundation_and_overrides
+ */
+header {
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: white;
+  background: black;
+}
+
+#logo {
+  font-family:'Inconsolata', sans-serif;
+  position: relative;
+  cursor: default;
+  width: 120px;
+  height: 2em;
+  font-size: 18pt;
+}
+.letter {
+  position: absolute;
+}
+.main-bg {
+  background: #b8d30b;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  padding-bottom: 20px;
+  font-size: 18pt;
+}
+.callout {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 48pt;
+  font-weight: 200;
+}

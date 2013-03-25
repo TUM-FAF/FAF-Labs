@@ -3,4 +3,4 @@ Feature: The application should provide a simple structure for courses and assig
   Scenario: Viewing the list of all courses
     Given I want to open the main page
     And I open main page
-    Then I should see the list of courses
+    Then I should see "Sign in"

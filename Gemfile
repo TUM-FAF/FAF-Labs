@@ -22,7 +22,7 @@ group :assets do
   gem 'haml-rails'
 end
 
-group :test do
+group :test, :development do
   gem 'cucumber-rails'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'capybara'

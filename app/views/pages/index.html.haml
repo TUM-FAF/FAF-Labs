@@ -1,10 +1,25 @@
 .main-bg
   .row
-    .small-12.large-6.large-offset-2.columns
+    .small-11.large-11.large-offset-1.columns
       .callout
         Study better.
+  .row
+    .small-12.large-6.large-offset-1.columns
       %p
         We're making your studies more efficient by keeping track of the way you study, analyzing your performances and providing hints based on statistics.
       %p
         And we think that's pretty cool.
-      =link_to "Sign in", 'users/sign_in', class: 'button'
+    .small-10.large-3.large-offset-1.small-offset-1.columns
+      .row
+        =form_for(resource, as: resource_name, url: user_session_path(resource_name)) do |f|
+          = devise_error_messages!
+
+          = f.email_field :email, placeholder: 'Email'
+
+          = f.password_field :password, placeholder: 'Password'
+
+
+          = f.submit "Sign in", class: 'button small sign_in'
+
+    .small-0.large-1.columns
+

@@ -45,3 +45,7 @@ $logo
       delta = $letter.data('index')*0.5
       $letter.stop(true).animate {left: delta+"em"}, 500
 
+
+$('#sign_in a').click ->
+  $(this).hide 100, ->
+    $('#sign_in_form').show()

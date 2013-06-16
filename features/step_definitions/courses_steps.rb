@@ -6,6 +6,7 @@ Given(/^I open main page$/) do
   visit '/'
 end
 
-Then(/^I should see the list of courses$/) do
-  assert page.has_content?("Windows Programming"), page.html
+Then /^I should see "([^"]*)"$/ do |text|
+    page.should have_content(text)
 end
+

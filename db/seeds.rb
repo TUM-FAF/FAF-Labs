@@ -9,3 +9,4 @@
 Course.create [{ name: 'Numerical Analysis' },
                { name: 'Windows Programming' },
                { name: 'Interactive Development Environments' }]
+User.create(email: 'user@example.com', password: 'testuser')

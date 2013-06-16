@@ -1,50 +1,32 @@
 source 'https://rubygems.org'
 
-gem 'rails',     github: 'rails/rails'
-gem 'arel',      github: 'rails/arel'
-gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
-gem 'protected_attributes'
+source 'https://rubygems.org'
 
+gem 'rails', '4.0.0.rc2'
 gem 'sqlite3'
+gem 'devise', '~> 3.0.0.rc'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
-  gem 'sass-rails',   github: 'rails/sass-rails'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-  gem 'zurb-foundation', '~> 4.0.0'
-  gem 'haml-rails'
-end
-
-group :test do
-  gem 'cucumber-rails'
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
-  gem 'capybara'
-  gem 'rspec-rails'
-end
-
+# Assets
+gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'haml-rails'
 gem 'jquery-rails'
+gem 'zurb-foundation', '~> 4.0.0'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails', require: false
+  gem 'debugger'
+  gem 'selenium-webdriver'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+end
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
+group :doc do
+  gem 'sdoc', require: false
+end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', group: :development
-
-# To use debugger
-# gem 'debugger'

@@ -11,13 +11,12 @@
         And we think that's pretty cool.
     .small-10.large-3.large-offset-1.small-offset-1.columns
       .row
-        =form_for(resource, as: resource_name, url: user_session_path(resource_name)) do |f|
+        =form_for(:user, url: user_session_path) do |f|
           = devise_error_messages!
 
           = f.email_field :email, placeholder: 'Email'
 
           = f.password_field :password, placeholder: 'Password'
-
 
           = f.submit "Sign in", class: 'button small sign_in'
 

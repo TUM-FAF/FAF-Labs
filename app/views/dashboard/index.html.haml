@@ -2,7 +2,8 @@ Dashboard
 
 %h2 Courses we have:
 - @dashboard.courses.each do |course|
+  = link_to course.name, course_path(course)
   %p
-    = course.name
+    = course.summary
 
 = link_to 'Add course', new_course_path

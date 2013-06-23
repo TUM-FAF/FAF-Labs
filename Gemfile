@@ -13,6 +13,7 @@ gem 'coffee-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'zurb-foundation', '~> 4.0.0'
+gem 'cancan'
 
 group :development, :test do
   gem 'rspec-rails'

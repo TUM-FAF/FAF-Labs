@@ -13,11 +13,8 @@
       .row
         =form_for(:user, url: user_session_path) do |f|
           = devise_error_messages!
-
           = f.email_field :email, placeholder: 'Email'
-
           = f.password_field :password, placeholder: 'Password'
-
           = f.submit "Sign in", class: 'button small sign_in'
 
     .small-0.large-1.columns

@@ -1,0 +1,11 @@
+= form_for @course, url: course_path do |f|
+  =f.label :name, 'Course name'
+  =f.text_field :name
+
+  =f.label :summary, 'Summary'
+  =f.text_area :summary
+
+  =f.label :syllabus, 'Syllabus'
+  =f.text_area :syllabus
+
+  =f.submit 'Save Course'

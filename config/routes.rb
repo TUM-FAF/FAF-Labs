@@ -6,5 +6,5 @@ FAFLabs::Application.routes.draw do
     get '/dashboard' => :index
   end
 
-  resource :course
+  resources :courses
 end

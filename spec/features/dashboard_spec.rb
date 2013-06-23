@@ -8,10 +8,10 @@ feature 'Going to the dashboard' do
     click_link "Add course"
     current_path.should == new_course_path
 
-    fill_in 'Name',        with: 'Testing'
+    fill_in 'Course name', with: 'Testing'
     fill_in 'Summary',     with: 'Blablabla, we test'
-    fill_in 'Description', with: 'Moar testing'
-    click_button 'Save'
+    fill_in 'Syllabus',    with: 'Moar testing'
+    click_button 'Save Course'
 
     current_path.should == dashboard_path
     page.should have_link('Testing')

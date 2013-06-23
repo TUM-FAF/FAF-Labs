@@ -18,13 +18,14 @@ gem 'cancan'
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'factory_girl_rails', require: false
   gem 'debugger'
-  gem 'selenium-webdriver'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'cucumber-rails'
-  gem 'database_cleaner'
+end
+
+group :test do
 end
 
 group :doc do

@@ -19,7 +19,7 @@
         .small-4.large-6.columns
           #logo FAF-labs
         -if current_user.present?
-          %button.sign_out Sign out
+          = link_to "Sign out", destroy_user_session_path, :class => 'button sign_out'
       
 
     = yield

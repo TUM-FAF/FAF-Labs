@@ -6,14 +6,14 @@ feature 'User signs out' do
 	scenario 'when the user is signed in' do
 		sign_in_with existing_user
 		visit(dashboard_path)
-		click_button('Sign out')
-		expect(page).to have_content('Sign in')
+		click_link('Sign out')
+		current_path.should == root_path
 	end
 
 	scenario 'when the user is signed out' do
 		sign_in_with existing_user
 		visit(dashboard_path)
-		click_button('Sign out')
+		click_link('Sign out')
 		page.should_not have_content('Sign out')
 	end
 end

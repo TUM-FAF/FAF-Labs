@@ -6,3 +6,13 @@ Summary:
 Syllabus:
 %p
   =@course.syllabus
+
+%p
+- if @course.subgroups.count < 2
+  = link_to 'Create subgroup', '', :class => 'button small'
+%p
+  = pluralize(@course.subgroups.count, 'subgroup:')
+%p
+  - @course.subgroups.each do |t|
+    %p= link_to t.name, '#' 
+

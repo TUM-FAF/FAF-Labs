@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(version: 20130716102829) do
   end
 
   create_table "subgroups", force: true do |t|
-    t.integer  "number"
+    t.string   "name"
+    t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

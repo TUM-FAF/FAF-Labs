@@ -9,9 +9,10 @@ Syllabus:
 
 %p
 - if @course.subgroups.count < 2
-  = link_to 'Create subgroup', '', :class => 'button small'
+  = link_to 'Create subgroup', new_course_subgroup_path(@course), :class => 'button small'
 %p
-  = pluralize(@course.subgroups.count, 'subgroup:')
+  - if @course.subgroups.count == 0
+    No subgroups
 %p
   - @course.subgroups.each do |t|
     %p= link_to t.name, '#' 

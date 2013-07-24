@@ -1,0 +1,5 @@
+= form_for @subgroup, url: course_subgroups_path do |f|
+  =f.label :name, 'Name'
+  =f.text_field :name
+
+  =f.submit 'Save Subgroup'

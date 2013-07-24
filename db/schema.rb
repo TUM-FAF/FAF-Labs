@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20130716102829) do
     t.datetime "updated_at"
   end
 
+  add_index "subgroups", ["course_id"], name: "index_subgroups_on_course_id"
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

@@ -1,4 +1,8 @@
 class SubgroupsController < ApplicationController
+	def show
+		@subgroup = Subgroup.find(params[:id])
+	end
+
 	def new
 		@subgroup = Subgroup.new
 	end

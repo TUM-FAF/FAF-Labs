@@ -15,5 +15,5 @@ Syllabus:
     No subgroups
 %p
   - @course.subgroups.each do |t|
-    %p= link_to t.name, '#' 
+    %p= link_to t.name, course_subgroup_path(@course, t) 
 

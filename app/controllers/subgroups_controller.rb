@@ -13,7 +13,7 @@ class SubgroupsController < ApplicationController
 		redirect_to course_path(@course)
 	end
 
-private
+	private
   def subgroup_params
     params.require(:subgroup).permit!
   end

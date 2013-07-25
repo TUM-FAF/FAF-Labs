@@ -10,4 +10,8 @@ FAFLabs::Application.routes.draw do
   resources :courses do
   	resources :subgroups
   end
+
+  resources :subgroups do
+  	resources :assignments
+  end
 end

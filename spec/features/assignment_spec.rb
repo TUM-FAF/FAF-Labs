@@ -15,10 +15,10 @@ feature 'Lecturer creates an assignment' do
     click_link 'Subgroup I'
     current_path.should == course_subgroup_path(course, course.subgroups.first)
     click_link 'New assignment'
-    current_path.should == new_subgroup_assignment(course.subgroups)
-    fill_in 'name', with: 'assignment one'
-    click_link 'Create assignment'
-    current_path.should == course_subgroup_path(course)
-    page.should have.content == 'assignment one'
+    current_path.should == new_subgroup_assignment_path(course.subgroups.first)
+    fill_in 'Name', with: 'assignment one'
+    click_button 'Create assignment'
+    current_path.should == subgroup_path(course)
+    page.should have_content('assignment one')
   end
 end

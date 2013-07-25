@@ -1,4 +1,7 @@
 %h2
   =@subgroup.name
 %p
-  =link_to "New assignment", '#'
+  =link_to "New assignment", new_subgroup_assignment_path(@subgroup)
+%p 
+  - @subgroup.assignments.each do |t|
+    %p= t.name

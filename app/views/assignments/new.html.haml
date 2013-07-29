@@ -1,5 +1,7 @@
 = form_for @assignment, url: subgroup_assignments_path  do |f|
-	=f.label :name
-	=f.text_field :name
+  =f.label :name
+  =f.text_field :name
 
-	=f.submit 'Create assignment'
+  =f.submit 'Create assignment'
+%p
+  = link_to 'Back', subgroup_path(@subgroup), class: 'button tiny secondary'

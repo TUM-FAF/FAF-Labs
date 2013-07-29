@@ -16,4 +16,6 @@ Syllabus:
 %p
   - @course.subgroups.each do |t|
     %p= link_to t.name, course_subgroup_path(@course, t) 
+%p
+  = link_to 'Back', dashboard_path, class: 'button tiny secondary'
 

@@ -4,6 +4,7 @@ class SubgroupsController < ApplicationController
 	end
 
 	def new
+		@course = Course.find(params[:course_id])
 		@subgroup = Subgroup.new
 	end
 

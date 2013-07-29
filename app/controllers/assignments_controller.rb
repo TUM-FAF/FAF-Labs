@@ -1,5 +1,6 @@
 class AssignmentsController < ApplicationController
 	def new
+		@subgroup = Subgroup.find(params[:subgroup_id])
 		@assignment = Assignment.new
 	end
 

@@ -1,5 +1,7 @@
 = form_for @assignment, url: subgroup_assignment_path(@assignment.subgroup, @assignment), method: :patch do |f|
-	=f.label :name
-	=f.text_field :name
+  =f.label :name
+  =f.text_field :name
 
-	=f.submit 'Save'
+  =f.submit 'Save'
+%p
+  = link_to 'Back', subgroup_path(@assignment.subgroup), class: 'button tiny secondary'

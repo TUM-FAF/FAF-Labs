@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 feature 'Lecturer has a course with a subgroup' do
-	let(:user)    { FactoryGirl.create(:user) }
-  let!(:course) { FactoryGirl.create(:course) }	
+  let(:user)    { FactoryGirl.create(:user) }
+  let!(:course) { FactoryGirl.create(:course) } 
   
-	scenario 'lecturer creates an assignment' do
-		sign_in_with user
-  	click_link course.name
-  	click_link 'Create subgroup'
+  scenario 'the lecturer creates an assignment' do
+    sign_in_with user
+    click_link course.name
+    click_link 'Create subgroup'
     current_path.should == new_course_subgroup_path(course)
     fill_in 'Name', with: 'Subgroup I'
     click_button 'Save Subgroup'
@@ -17,11 +17,11 @@ feature 'Lecturer has a course with a subgroup' do
     current_path.should == new_subgroup_assignment_path(course.subgroups.first)
     fill_in 'Name', with: 'assignment one'
     click_button 'Create assignment'
-    current_path.should == subgroup_path(course)
+    current_path.should == subgroup_path(course.subgroups.first)
     page.should have_content('assignment one')
   end
 
-  scenario 'lecturer edits an assignment' do
+  scenario 'the lecturer edits the assignment' do
     sign_in_with user
     click_link course.name
     click_link 'Create subgroup'
@@ -34,10 +34,10 @@ feature 'Lecturer has a course with a subgroup' do
     page.should have_content('Edit')
     click_link 'Edit'
     page.should have_content('Name')
-    page.should have_content('Save')
-    fill_in 'Name', with: '(Edit)'
+    page.should have_button('Save')
+    fill_in 'Name', with: 'assignment one(Edit)'
     click_button 'Save'
-    current_path.should == subgroup_path(course)
+    current_path.should == subgroup_path(course.subgroups.first)
     page.should have_content('assignment one(Edit)')    
   end
 end

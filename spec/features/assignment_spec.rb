@@ -40,4 +40,21 @@ feature 'Lecturer has a course with a subgroup' do
     current_path.should == subgroup_path(course.subgroups.first)
     page.should have_content('assignment one(Edit)')    
   end
+
+  scenario 'the lecturer publishes the assignment' do
+    sign_in_with user
+    click_link course.name
+    click_link 'Create subgroup'
+    fill_in 'Name', with: 'Subgroup I'
+    click_button 'Save Subgroup'
+    click_link 'Subgroup I'
+    click_link 'New assignment'
+    fill_in 'Name', with: 'assignment one'
+    click_button 'Create assignment'
+    expect(page).to have_content('Publish')
+    click_link 'Publish'
+    click_link 'assignment one'
+    current_path.should == subgroup_assignment_path(course.subgroup, course.subgroup.assignment)
+    page.should have_content('assignment one')
+  end
 end

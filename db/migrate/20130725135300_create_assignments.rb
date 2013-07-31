@@ -4,7 +4,8 @@ class CreateAssignments < ActiveRecord::Migration
     	t.string :name
     	t.text :description
     	t.datetime :due_date
-    	t.datetime :published
+    	t.datetime :publish_date
+      t.boolean :published
 
     	t.references :subgroup
 

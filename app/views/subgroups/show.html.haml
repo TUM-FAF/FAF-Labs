@@ -1,5 +1,7 @@
 %h2
   =@subgroup.name
+
+%h3 Assignments
 %p
   =link_to "New assignment", new_subgroup_assignment_path(@subgroup)
 %p 
@@ -11,3 +13,10 @@
 
 %p
   = link_to 'Back', course_path(@subgroup.course), class: 'button tiny secondary'
+
+%h3 Published assignments
+%p
+  - @subgroup.assignments.published.each do |t|
+    %p
+      = t.name
+      = t.publish_date

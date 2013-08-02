@@ -14,6 +14,12 @@ class AssignmentsController < ApplicationController
 		@assignment = Assignment.find(params[:id])
 	end
 
+	def update_published
+		Assignment.find(params[:id]).update_attributes!(published: true)
+		redirect_to :back
+	end
+
+
 	def update
 		@subgroup = Subgroup.find(params[:subgroup_id])
 		@assignment = Assignment.find(params[:id])

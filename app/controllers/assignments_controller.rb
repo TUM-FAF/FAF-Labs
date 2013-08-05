@@ -15,10 +15,15 @@ class AssignmentsController < ApplicationController
 	end
 
 	def update_published
-		Assignment.find(params[:id]).update_attributes!(published: true)
+		@time = Time.zone.now
+		@assignment = Assignment.find(params[:id])
+		if @assignment.published != true
+			@assignment.update_attributes!(published: true, publish_date: @time)
+		else
+			@assignment.update_attributes!(published: false)
+		end
 		redirect_to :back
 	end
-
 
 	def update
 		@subgroup = Subgroup.find(params[:subgroup_id])

@@ -7,5 +7,14 @@ FAFLabs::Application.routes.draw do
     get '/dashboard' => :index
   end
 
-  resources :courses
+  resources :courses do
+  	resources :subgroups
+  end
+
+  resources :subgroups do
+  	resources :assignments
+    put '/assignments/:id/update_published', to: 'assignments#update_published', as: 'update_published'
+  end
+
+
 end

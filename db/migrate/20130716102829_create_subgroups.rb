@@ -6,5 +6,7 @@ class CreateSubgroups < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :subgroups, :course_id
   end
 end

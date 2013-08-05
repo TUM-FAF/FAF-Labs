@@ -9,7 +9,7 @@
     %p
       = t.name
       = link_to 'Edit', edit_subgroup_assignment_path(@subgroup, t), class: 'button tiny'
-      = if t.published != true
+      - if t.published != true
         = link_to 'Publish', subgroup_update_published_path(@subgroup, t), method: :put, class: 'button tiny'
       - else
         = link_to 'Unpublish', subgroup_update_published_path(@subgroup, t), method: :put, class: 'button tiny' 
